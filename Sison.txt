@@ -1,0 +1,3 @@
+May.18th, 2019
+Restucture game from another language to Java script
+Still a lot of glitches
