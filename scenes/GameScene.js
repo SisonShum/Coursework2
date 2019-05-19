@@ -6,7 +6,6 @@ var gameConf = {
   title: 'Chess',
   display: block,
   margin: 50,
-  box-shadow: -2,-2,2,#efefef , 5, 5, 5, #b9b9b9,
  }
 
 var GameScene = new Phaser.Scene(gameConf);
