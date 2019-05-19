@@ -1,12 +1,9 @@
 var gameConf = {
 	key: "Game",
-
-}
- var gamecanvas = {
   title: 'Chess',
   display: block,
   margin: 50,
- }
+}
 
 var GameScene = new Phaser.Scene(gameConf);
 
