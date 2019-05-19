@@ -1,0 +1,71 @@
+var Game = (function() {
+    var chessColor = 2
+    var isWin = false
+    var ele = document.getElementById('root')
+
+    function instantGobang(onEnd, onKeep) {
+        // Generate Gobang instances to define end and continue events
+        var mygobang = new Gobang({
+            end(color) {
+                onEnd(color)
+                isWin = true
+            },
+            keep(color) {
+                onKeep(color)
+            }
+        })
+
+        return mygobang
+    }
+
+    function renderTpl(num) {
+        var tpl, 
+            coordArr = [], 
+            htm = '',
+            arr = [...Array(num).keys()]
+
+            rwidth = ele.clientWidth
+            // console.log(rwidth)
+            swidth = parseInt((rwidth/num), 10) + 'px'
+            cwidth = parseInt((rwidth/num/1.2), 10) + 'px'
+
+        tpl= (coord, color) => ( `
+            <div class="square" style="width:${swidth};height:${swidth}">
+                <div class="circle ${color ? color : ''}" data-coord="${coord}" style="width:${cwidth};height:${cwidth}"></div>
+            </div>
+        `)
+
+        arr.forEach(v => arr.forEach(e => htm += tpl([e,v])))
+
+        return htm
+    }
+
+    function renderHtm (tpl) {
+        ele.innerHTML = tpl
+    }
+
+    function bindEvent(mygobang) {
+        ele.addEventListener('click', (e)=> {
+            if(isWin) {
+                return
+            }
+            var target = e.target
+            if (target.className.includes('circle') && target.classList.length == 1) {
+                chessColor = 3 - chessColor
+                var coord = target.getAttribute('data-coord').split(',')
+                target.classList.add(chessColor == 1 ? 'white' : 'black')
+                mygobang.palyChess(+coord[0], +coord[1], chessColor)
+            }
+        })
+    }  
+
+    return {
+        start(num,{onEnd,onKeep}) {
+            // Render chessboard
+            renderHtm(renderTpl(num))
+
+            // Generate Gobang instances and bind events
+            bindEvent(instantGobang(onEnd,onKeep))
+        }
+    }
+})()
