@@ -18,7 +18,7 @@ In this 5-minute presentation you are to provide:
 Additionally, you are to create a Power Point file with some screen-shots / photos of the parts of the Game that you have created, you can prepare a video of it if you prefer.
 
 Final Delivery and Post-Mortem 30% of total mark
-In the last 5 minutes presentation you are to provide:
+In the last 5 minutes presentation you are to 
 -	Your name
 -	Your team’s name
 -	A short history of the whole development process, including what was completed and what was not completed from your original plan.
