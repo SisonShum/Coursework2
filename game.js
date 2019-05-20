@@ -1,6 +1,4 @@
 var config = {
-  width: 450,
-  height: 450,
   type: Phaser.AUTO,
   scene: [LoaderScene, BootScene, GameScene],
   title: 'Chess',

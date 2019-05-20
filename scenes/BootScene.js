@@ -1,6 +1,3 @@
-//we store the soundtrack here
-var soundTrack;
-
 var bootConf = {
 	key: "Boot"
 }
