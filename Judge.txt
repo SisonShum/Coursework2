@@ -64,3 +64,4 @@ GameScene.judge = function(che,color)
     this.EndLevel();
   }
 }
+asdaasasfasf
