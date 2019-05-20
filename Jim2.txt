@@ -1,0 +1,53 @@
+//Player class, inherit biological class
+function Player(imgs,position,callbacks){
+    Livings.call(this,imgs,position);
+    this.speed = {x:80,y:0};
+    this.lifes = 3;
+    this.act="moveR";
+    this.onCrush = callbacks.onCrush
+}
+inheritPrototype(Player,Livings);
+Player.prototype.die =function(){
+    if(this.isAlive) {
+        this.isAlive = false;
+        this.speed = {x: 0, y: -400};
+    }
+}
+Player.prototype.update = function(control,canvas,interTime,loop){//Update state
+    var moveX=0,moveY= 0,direction = this.act.slice(-1),ctx = canvas.getContext("2d");
+    //Control left and right walking, jumping
+    if(control.status.left){
+        moveX = -this.speed.x * interTime / 1000;
+        direction = "L";
+        this.spirit("move"+direction)
+    }
+    if(control.status.right){
+        if (this.position.x-this.map.x < canvas.width / 2) {
+            moveX = this.speed.x * interTime / 1000;
+            direction = "R";
+        }
+        this.spirit("move"+direction)
+    }
+    if(control.status.jump){
+        if(this.crush.bottom) {
+            this.speed.y = -256;
+            moveY = this.speed.y * interTime / 1000;
+        }
+    }
+    if(this.crush.bottom){
+        this.act = "move"+direction;
+    }
+    else{
+        this.act = "jump"+direction;
+    }
+
+    this.move(moveX, moveY)
+    this.gravity(400, interTime / 1000)
+    if(this.position.y>CHEIGHT){
+        this.die();
+    }
+    if(!this.isAlive){
+        loop.info.gameover=true;
+    }
+    //console.log(this.position)
+}
