@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Phaser 3 Multiplayer GoBang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height = device-height, initial-scale=1">
+    <!-- this style tag is used to resize and center the game canvas -->
+    <style>
+      html, body { height: 100%; }
+      body { margin: 0; padding: 0; background: #111 }
+      canvas { width: 100%; height: 100%; object-fit: contain; }
+    </style>
+  </head>
+  <body>
+    <!-- Load the engine -->
+    <script src="phaser.min.js"></script>
+
+    <!-- Load external libraries -->
+    <script src="https://ssmms.herokuapp.com/api"></script>
+
+    <!-- Load all our scenes here -->
+    <script src="scenes/Preloader.js"></script>
+    <script src="scenes/BootScene.js"></script>
+    <script src="scenes/GameScene.js"></script>
+
+    <!-- Load the game -->
+    <script src="game.js"></script>
+  </body>
+</html>
