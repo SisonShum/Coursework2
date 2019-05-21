@@ -1,0 +1,60 @@
+if (tilesValues[0][0] == 2 && tilesValues[1][1] == 2 && tilesValues[2][2] == 2 && tilesValues[3][3] == 2 && tilesValues[4][4] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[1][1] == 2 && tilesValues[2][2] == 2 && tilesValues[3][3] == 2 && tilesValues[4][4] == 2 && tilesValues[5][5] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[2][2] == 2 && tilesValues[3][3] == 2 && tilesValues[4][4] == 2 && tilesValues[5][5] == 2 && tilesValues[6][6] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[3][3] == 2 && tilesValues[4][4] == 2 && tilesValues[5][5] == 2 && tilesValues[6][6] == 2 && tilesValues[7][7] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[4][4] == 2 && tilesValues[5][5] == 2 && tilesValues[6][6] == 2 && tilesValues[7][7] == 2 && tilesValues[8][8] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[5][5] == 2 && tilesValues[6][6] == 2 && tilesValues[7][7] == 2 && tilesValues[8][8] == 2 && tilesValues[9][9] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[1][0] == 2 && tilesValues[2][1] == 2 && tilesValues[3][2] == 2 && tilesValues[4][3] == 2 && tilesValues[5][4] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[2][1] == 2 && tilesValues[3][2] == 2 && tilesValues[4][3] == 2 && tilesValues[5][4] == 2 && tilesValues[6][5] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[3][2] == 2 && tilesValues[4][3] == 2 && tilesValues[5][4] == 2 && tilesValues[6][5] == 2 && tilesValues[7][6] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[4][3] == 2 && tilesValues[5][4] == 2 && tilesValues[6][5] == 2 && tilesValues[7][6] == 2 && tilesValues[8][7] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[5][4] == 2 && tilesValues[6][5] == 2 && tilesValues[7][6] == 2 && tilesValues[8][7] == 2 && tilesValues[9][8] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
+    if (tilesValues[2][0] == 2 && tilesValues[3][1] == 2 && tilesValues[4][2] == 2 && tilesValues[5][3] == 2 && tilesValues[6][4] == 2 )
+	{
+		alert("Player 2 won!");
+		this.EndLevel();
+    }
